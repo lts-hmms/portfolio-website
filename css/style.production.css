@@ -1,0 +1,329 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*Replace all your colors with native CSS color variables.
+Replace any other repetitive values (e.g., font-weight, font-size, etc.) as variables, as well.
+Postprocess your CSS file once you’re done.
+Copy the content of your CSS file and paste it into the PostCSS playground for converting variables.
+Copy the output of the PostCSS playground and paste it into the autoprefixer.
+Create a new file called “style.production.css” and paste the output of the autoprefixer into the file.
+Important: Make sure you keep (and turn in) not only your new “style.production.css” file but also your “styles.css” file. Any future changes to your CSS should be made through your original “styles.css” files, then this process should be repeated again to create a new “style.production.css” file.
+Update the links to your CSS file in all your HTML files (they should now point to your “style.production.css” file).*/
+
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	background-color: #fff;
+	font-family: 'Roboto flex', sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	color: #000;
+}
+
+h1 {
+	font-weight: 400;
+}
+
+h2 {
+	font-weight: 400;
+}
+
+h3 {
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 30px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+a {
+	color: #b650a1;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #4c3f91;
+}
+
+button {
+	/* overwrites browser defaults and resets the border */
+	border: none;
+	display: inline-block;
+	/* takes the font from the outer container */
+	font-family: inherit;
+	font-weight: lighter;
+	/* styles the background color, font color, and text decoration (underline, etc.) of the button */
+	background-color: #b650a1;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 3px;
+	/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+	-webkit-transition: 0.7s opacity;
+	-o-transition: 0.7s opacity;
+	transition: 0.7s opacity;
+}
+
+.button {
+	/* overwrites browser defaults and resets the border */
+	border: none;
+	display: inline-block;
+	/* takes the font from the outer container */
+	font-family: inherit;
+	font-weight: lighter;
+	/* styles the background color, font color, and text decoration (underline, etc.) of the button */
+	background-color: #b650a1;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	border-radius: 3px;
+	/* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+	-webkit-transition: 0.7s opacity;
+	-o-transition: 0.7s opacity;
+	transition: 0.7s opacity;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+	/* lets the mouse appear as a hand when hovering over the button */
+	cursor: pointer;
+	/* reduces the opacity of the button to 80% */
+	opacity: 0.8;
+}
+.button__secondary {
+	background-color: #e0b354;
+	color: #000;
+}
+
+.profile__portrait {
+	float: left;
+	width: 250px;
+	margin-right: 20px;
+	border-radius: 50%;
+}
+
+.page-footer {
+	clear: both;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	text-align: center;
+}
+
+.profile {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.page-header {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	padding: 20px;
+}
+.page-header__item {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 1 200px;
+	flex: 0 1 200px;
+}
+.page-header__item:last-child {
+	-webkit-box-flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	text-align: right;
+}
+.page-header__item:first-child {
+	width: 30%;
+	margin-left: 65px;
+}
+
+.navigation-list {
+	list-style-type: none;
+}
+.navigation-list li {
+	display: inline-block;
+	margin-left: 15px;
+}
+/* start grid fallback */
+.grid__item {
+	display: inline-block;
+	width: 33%;
+	background-color: #d3d3d3;
+}
+/* end grid fallback */
+
+.grid {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 1fr 15px 1fr 15px 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 15px;
+}
+@supports (display: grid) {
+	.grid__item {
+		background-color: #d3d3d3;
+		width: auto;
+		min-height: auto;
+		margin: 0;
+	}
+}
+
+.contact-form {
+	width: 100%;
+	padding: 100px;
+}
+/* responsive pages with Media Queries */
+@media all and (min-width: 0px) and (max-width: 750px) {
+	.grid {
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+		grid-gap: 10px;
+	}
+	.grid__item:last-child {
+		grid-column: auto / auto;
+		grid-row: auto / auto;
+	}
+	h1 {
+		font-size: 22px;
+	}
+	.profile__portrait {
+		float: none;
+		margin-left: 5%;
+	}
+	.profile {
+		text-align: center;
+	}
+	.home-text {
+		margin-left: 5%;
+		margin-right: 5%;
+		text-align: center;
+	}
+}
+@media all and (max-width: 500px) {
+	.grid {
+		-ms-grid-columns: 1fr;
+		grid-template-columns: 1fr;
+	}
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+	.grid {
+		-ms-grid-columns: 1fr 10px 1fr;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+@media all and (max-width: 750px) {
+	.grid {
+		grid-gap: 10px;
+	}
+	.grid__item:last-child {
+		grid-column: auto / auto;
+		grid-row: auto / auto;
+	}
+	h1 {
+		font-size: 22px;
+	}
+}
+
+@-webkit-keyframes color-change {
+	0% {
+		fill: #edc655;
+	}
+	50% {
+		fill: #fcffad;
+	}
+	100% {
+		fill: #f76414;
+	}
+}
+
+@keyframes color-change {
+	0% {
+		fill: #edc655;
+	}
+	50% {
+		fill: #fcffad;
+	}
+	100% {
+		fill: #f76414;
+	}
+}
+.quadriga {
+	-webkit-animation: 4s color-change infinite alternate linear;
+	animation: 4s color-change infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-move {
+	from {
+		-webkit-transform: translate(0, 50px);
+		transform: translate(0, 50px);
+	}
+	to {
+		-webkit-transform: translate(200px, 50px);
+		transform: translate(200px, 50px);
+	}
+}
+
+@keyframes cloud-move {
+	from {
+		-webkit-transform: translate(0, 50px);
+		transform: translate(0, 50px);
+	}
+	to {
+		-webkit-transform: translate(200px, 50px);
+		transform: translate(200px, 50px);
+	}
+}
+
+.cloud-front {
+	-webkit-animation: 30s cloud-move infinite alternate linear;
+	animation: 30s cloud-move infinite alternate linear;
+}
+
+@-webkit-keyframes cloud-move-reverse {
+	from {
+		-webkit-transform: translate(446px, 48px);
+		transform: translate(446px, 48px);
+	}
+	to {
+		-webkit-transform: translate(100px, 48px);
+		transform: translate(100px, 48px);
+	}
+}
+
+@keyframes cloud-move-reverse {
+	from {
+		-webkit-transform: translate(446px, 48px);
+		transform: translate(446px, 48px);
+	}
+	to {
+		-webkit-transform: translate(100px, 48px);
+		transform: translate(100px, 48px);
+	}
+}
+.cloud-back {
+	-webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+	animation: 34s cloud-move-reverse infinite alternate linear;
+}

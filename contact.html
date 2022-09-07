@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Web Developing Portfolio</title>
+         <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Roboto+Flex:opsz,wght@8..144,100;8..144,300&display=swap" rel="stylesheet">
+         <link rel="stylesheet" type="text/css" href="css/normalize.css">
+         <link rel="stylesheet" type="text/css" href="css/style.production.css">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header class="page-header">
+            <!-- don't forget replacing the placeholders -->  
+            <img class="page-header__item" src="img/logo_jusue.svg" alt="personal logo of judith sueggeler" >
+            <nav class="main-navigation page-header__item">
+                <ul role="menubar" class="navigation-list">
+                    <li role="presentation">
+                        <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+                    </li>
+                
+                </ul>
+            </nav>
+        </header>
+        <div class="profile">
+            <h1>Contact</h1>
+            <div>
+                Judith Süggeler<br>
+                Gropiusstr. 1a<br>
+                13357 Berlin<br>
+                Germany<br>
+                <br>
+                <a href="tel:+491578-5562506" aria-label="phone number">+4915785562506</a><br>
+                <a href="mailto:judith.projects@gmail.com">judith.projects(at)gmail(dot)com</a>
+                <p></p>
+                <a href="mailto:judith.projects@gmail.com">Contact me</a>
+            </div>
+            <div class="contact-form">
+                <form action="" method="post">
+                    <label class="standard-label" for="contact-email">E-mail: </label>
+                   
+                    <input type="email" id="contact-email" required>
+                    <p></p>
+                    <label for="contact-telephone">Telephone: </label>
+                    <input type="tel" id="contact-telephone" pattern="\d{3}[\-]\d{3}[\-]\d{4}">
+                    <p></p>
+                    <label for="contact-message">Message: </label>
+                    <textarea id="contact-message" maxlength="240" required></textarea>
+                    <p></p>
+                    <input type="submit" value="Send message">
+                </form>
+            </div>
+        </div>
+        <footer class="page-footer">
+            <p>Visit me on:</p>
+            <!-- don't forget replacing the placeholders -->
+            <div class=""social-media">
+            <img src="img/104501_twitter_bird_icon.svg" alt="Twitter logo, the silouette of a black bird">
+            <img src="img/1220369_github_git_hub_icon.svg" alt="Github logo, the silouette of a black cat">
+            <img src="img/216394_linkedin_social_icon.svg" alt="Linkedin logo, the word 'in' in black">
+            </div>
+        </footer>
+        <script src="js/tota11y.min.js"></script>
+    </body>
+</html>
+
