@@ -193,8 +193,22 @@ button:focus,
 		text-align: center;
 	}
 }
+@media all and (max-width: 330px) {
+	.contact-form {
+		padding: 50px;
+	}
+	.page-header__item:first-child {
+		margin-left: 45px;
+	}
+	.page-header__item {
+		flex: 0 1;
+	}
+}
 
 @media all and (max-width: 500px) {
+	body {
+		font-size: 16px;
+	}
 	.grid {
 		grid-template-columns: 1fr;
 	}
@@ -218,6 +232,9 @@ button:focus,
 
 	h1 {
 		font-size: 22px;
+	}
+	.profile {
+		margin: 0 5%;
 	}
 }
 
